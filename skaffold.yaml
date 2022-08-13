@@ -7,6 +7,11 @@ build:
   - image: cdutten/nie-appt-alerter
     docker:
       dockerfile: Dockerfile
+    sync:
+      manual:
+        # sync a single file into the `/etc` folder
+        - src: 'main.py'
+          dest: /usr/src/app
 deploy:
   kubectl:
     manifests:

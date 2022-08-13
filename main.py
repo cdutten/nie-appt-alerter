@@ -7,6 +7,8 @@ from pyvirtualdisplay import Display
 
 class Main:
     def __init__(self, url):
+        print("Ahoj!")
+
         # set xvfb display since there is no GUI in docker container.
         display = Display(visible=0, size=(800, 600))
         display.start()
@@ -25,6 +27,7 @@ class Main:
         assert "No results found." not in driver.page_source
         driver.close()
         display.stop()
+        print("BIANCULI")
 
 
 # Press the green button in the gutter to run the script.
