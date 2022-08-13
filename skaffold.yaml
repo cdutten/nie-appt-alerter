@@ -4,11 +4,12 @@ metadata:
   name: nie-appt-alerter
 build:
   artifacts:
-  - image: cdutten/nie-appt-alert
+  - image: cdutten/nie-appt-alerter
     docker:
       dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
-    - k8s/nie-app-alerter-cj.yaml
     - k8s/nie-appt-alerter-ns.yaml
+    - k8s/nie-appt-alerter-cj.yaml
+

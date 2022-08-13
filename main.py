@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 
 class Main:
     def __init__(self, url):
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome()
         driver.get(url)
         assert "Python" in driver.title
         elem = driver.find_element(By.NAME, "q")
