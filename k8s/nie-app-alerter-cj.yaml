@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nie-appt-alert
+  namespace: nie-appt-alert
+spec:
+  jobTemplate:
+    metadata:
+      name: nie-appt-alert
+    spec:
+      template:
+        spec:
+          containers:
+          - image: cdutten/nie-appt-alert
+            name: nie-appt-alert
+          restartPolicy: OnFailure
+  schedule: '*/1 * * * *'
+status: {}
