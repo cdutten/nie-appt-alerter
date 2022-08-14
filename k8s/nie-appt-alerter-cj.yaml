@@ -14,5 +14,5 @@ spec:
           - image: cdutten/nie-appt-alerter
             name: nie-appt-alerter
           restartPolicy: OnFailure
-  schedule: '*/5 * * * *'
+  schedule: '*/1 * * * *'
 status: {}

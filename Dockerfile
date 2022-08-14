@@ -22,6 +22,6 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
-CMD [ "/bin/bash", "-c", "--", "while true; do python main.py; done; "]
+CMD ["python", "main.py"]
 
 
